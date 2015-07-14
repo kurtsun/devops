@@ -30,7 +30,8 @@ class Mail(object):
     
         message =  Message(From=self.fr,
                     To=self.to,
-                    Subject=self.sub)
+                    Subject=self.sub,
+                    Charset='utf8')
 	message.Body = self.body
 
         sender = Mailer(host=self.server,usr=self.usr,pwd=self.pwd)
